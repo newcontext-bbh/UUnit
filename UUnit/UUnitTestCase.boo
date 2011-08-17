@@ -1,8 +1,6 @@
 import UnityEngine
 import System.Reflection
 
-
-
 class UUnitTestCase (): 
 	local as duck
 	

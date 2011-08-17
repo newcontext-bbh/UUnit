@@ -8,11 +8,11 @@ class UUnitAssert ():
 		raise UUnitAssertException(true, false, msg);
 		
 	static def False(boolean as bool,msg as string):
-		return unless boolean 
+		return unless boolean
 		raise UUnitAssertException(false, true, msg);
 		
 	static def EqualString(wanted as string,got as string,msg as string):
-		return if wanted == got 
+		return if wanted == got
 		raise UUnitAssertException(wanted, got, msg)
 	
 	static def EqualDuck(wanted as duck,got as duck,msg as string):

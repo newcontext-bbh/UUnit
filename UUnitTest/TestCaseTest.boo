@@ -24,7 +24,7 @@ class TestCaseTest(UUnitTestCase):
 		result = local.Run(null)
 		UUnitAssert.EqualString( "1 run, 0 failed", result.Summary(), "testResult")			
 
-	[UUnitTest]				
+	[UUnitTest]
 	def TestFailure():
 		local= TestCaseDummy(Testx:"TestFail")
 		result = local.Run(null)

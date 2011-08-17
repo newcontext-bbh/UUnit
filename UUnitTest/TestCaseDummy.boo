@@ -17,4 +17,5 @@ class TestCaseDummy (UUnitTestCase):
 	
 	[UUnitTest]
 	def TestFail():
-		UUnitAssert.True( false, "Expected Fail Result")		
+		UUnitAssert.True( false, "Expected Fail Result")
+	

@@ -17,8 +17,8 @@ class UUnitTestSuite():
 
 	def AddAll(aType):
 		theType = aType.GetType()
-		for methodInformation as MethodInfo in theType.GetMethods() :  
-			for attr  in methodInformation.GetCustomAttributes(false):
+		for methodInformation as MethodInfo in theType.GetMethods() :
+			for attr in methodInformation.GetCustomAttributes(false):
 				testAttr = attr as Attribute
 				if testAttr != null :
 					ci = theType.GetConstructors()

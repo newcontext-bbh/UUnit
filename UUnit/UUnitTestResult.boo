@@ -1,8 +1,8 @@
 import UnityEngine
 
 class UUnitTestResult(): 
-	runCount = 0
-	failedCount =0
+	public runCount = 0
+	public failedCount =0
 
 	def TestStarted():
 		runCount+=1
