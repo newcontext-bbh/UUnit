@@ -2,6 +2,14 @@ import System
 
 class UUnitAssert (): 
 
+	static def True(boolean as bool):
+		return if boolean 
+		raise UUnitAssertException(true, false, "Expected true, was false");
+		
+	static def False(boolean as bool):
+		return unless boolean
+		raise UUnitAssertException(false, true, "Expected false, was true");
+
 	static def True(boolean as bool,msg as string):
 		return if boolean 
 		raise UUnitAssertException(true, false, msg);
