@@ -1,5 +1,3 @@
-import UnityEngine
-
 class UUnitTestResult(): 
 	public runCount = 0
 	public failedCount =0

@@ -1,4 +1,3 @@
-import UnityEngine
 import System.Reflection
 
 class UUnitTestCase (): 
