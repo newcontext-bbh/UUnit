@@ -2,27 +2,33 @@ import System
 
 class UUnitAssert (): 
 
-	static def True(boolean as bool):
-		return if boolean 
-		raise UUnitAssertException(true, false, "Expected true, was false");
-		
-	static def False(boolean as bool):
-		return unless boolean
-		raise UUnitAssertException(false, true, "Expected false, was true");
-
-	static def True(boolean as bool,msg as string):
-		return if boolean 
+	static def True(flag as bool, msg as string):
+		return if flag 
 		raise UUnitAssertException(true, false, msg);
 		
-	static def False(boolean as bool,msg as string):
-		return unless boolean
+	static def True(flag as bool):
+		True(flag, null)
+		
+		
+	static def False(flag as bool, msg as string):
+		return unless flag
 		raise UUnitAssertException(false, true, msg);
 		
-	static def EqualString(wanted as string,got as string,msg as string):
+	static def False(flag as bool):
+		False(flag, null)
+		
+		
+	static def EqualString(wanted as string, got as string, msg as string):
 		return if wanted == got
 		raise UUnitAssertException(wanted, got, msg)
+
+	static def EqualString(wanted as string, got as string):
+		EqualString(wanted as string, got as string, null)
 	
-	static def EqualDuck(wanted as duck,got as duck,msg as string):
+	
+	static def EqualDuck(wanted as duck, got as duck, msg as string):
 		return if wanted == got 
 		raise UUnitAssertException(wanted, got, msg)
 		
+	static def EqualDuck(wanted as duck, got as duck):
+		EqualDuck(wanted, got, null)
