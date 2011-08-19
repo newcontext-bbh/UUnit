@@ -5,7 +5,7 @@ class UUnitAssertException (Exception):
 	public Received as duck
 	public Msg as string
 	def constructor(expected, received, msg):
-		Expected = expected
-		Received = received
-		Msg = msg
-		super("[UUnit] - Assert Failed - Expected: " + Expected + " Received: " + Received + "\n\t\t(" + Msg + ")")
+		if expected == null: expected = "(null)"
+		if received == null: received = "(null)"
+		if msg != null: msg = "\n\t" + msg
+		super("[UUnit] - Assert Failed" + msg + "\n\tExpected: " + expected + "\n\tReceived: " + received)
