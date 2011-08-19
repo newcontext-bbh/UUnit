@@ -1,6 +1,4 @@
-import UnityEngine
 import System
-
 
 class TestCaseRunner (MonoBehaviour):
 	public result = UUnitTestResult()
@@ -14,4 +12,5 @@ class TestCaseRunner (MonoBehaviour):
 	static def RunTests ():
 		runner = TestCaseRunner()
 		runner.Start()
-		UnityEditor.EditorApplication.Exit(runner.result.failedCount)
+		ifdef UNITY_EDITOR:
+			UnityEditor.EditorApplication.Exit(runner.result.failedCount)
