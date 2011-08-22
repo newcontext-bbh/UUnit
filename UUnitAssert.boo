@@ -17,7 +17,7 @@ class UUnitAssert ():
 	static def False(flag as bool):
 		False(flag, null)
 		
-		
+	
 	static def EqualString(wanted as string, got as string, msg as string):
 		return if wanted == got
 		raise UUnitAssertException(wanted, got, msg)
@@ -29,6 +29,6 @@ class UUnitAssert ():
 	static def EqualDuck(wanted as duck, got as duck, msg as string):
 		return if wanted == got 
 		raise UUnitAssertException(wanted, got, msg)
-		
+	
 	static def EqualDuck(wanted as duck, got as duck):
 		EqualDuck(wanted, got, null)
