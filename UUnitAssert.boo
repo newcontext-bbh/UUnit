@@ -18,6 +18,14 @@ class UUnitAssert ():
 		False(flag, null)
 		
 	
+	static def Exists(wanted as duck, msg as string):
+		return if wanted
+		raise UUnitAssertException(wanted, "(not null)", msg)
+
+	static def Exists(wanted as duck):
+		Exists(wanted as duck, null)
+
+
 	static def EqualString(wanted as string, got as string, msg as string):
 		return if wanted == got
 		raise UUnitAssertException(wanted, got, msg)
